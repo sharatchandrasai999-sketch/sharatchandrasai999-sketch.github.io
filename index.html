@@ -485,7 +485,7 @@ input,select,textarea{transition:border-color .26s var(--smooth),background .26s
   <div class="wrap">
     <div class="hero-layout">
       <div class="hero-text">
-        <span class="avail"><span class="dot" aria-hidden="true"></span>Available May 2026</span>
+        <span class="avail"><span class="dot" aria-hidden="true"></span>Available now</span>
         <h1 class="reveal">Sharat Chandra Sai Boddu</h1>
         <p class="thesis reveal" style="transition-delay:.06s">ML / LLM engineer who builds end-to-end machine learning systems — and <strong>the tooling to prove they actually work.</strong></p>
         <div class="hero-actions reveal" style="transition-delay:.12s">
@@ -738,7 +738,7 @@ input,select,textarea{transition:border-color .26s var(--smooth),background .26s
         <p class="lead">I got hooked on a slightly unglamorous question: not "can the model do it?" but "how do we actually know it did?"</p>
         <p>Most of my projects start there. I'd rather spend my time on the evaluation, the scoring, and the guardrails that turn a clever demo into something you'd trust with real data — because <strong>a model you can't measure is a model you can't ship.</strong></p>
         <p>My path ran from a computer science degree in Hyderabad, where I started out building Android apps, to a master's in Artificial Intelligence at the University of North Texas. Somewhere along the way I stopped wanting to just train models and started wanting to make them reliable — which is how I ended up writing open-source tools for LLM evaluation and cost control.</p>
-        <p>I'm graduating in May 2026 and looking for a Machine Learning / AI Engineer role where shipping and measuring are treated as the same job.</p>
+        <p>I graduated in May 2026 and I'm looking for a Machine Learning / AI Engineer role where shipping and measuring are treated as the same job.</p>
         <p class="sig">— Sharat</p>
       </div>
     </div>
@@ -785,7 +785,7 @@ input,select,textarea{transition:border-color .26s var(--smooth),background .26s
     <div class="reveal"><div class="section-label">Education</div><h2>Where I studied</h2></div>
     <div class="tl reveal" style="margin-top:28px;">
       <div class="tl-item">
-        <div class="tl-head"><span class="tl-role">M.S. in Artificial Intelligence</span><span class="tl-when">Expected May 2026</span></div>
+        <div class="tl-head"><span class="tl-role">M.S. in Artificial Intelligence</span><span class="tl-when">May 2026</span></div>
         <div class="tl-org">University of North Texas <span class="loc">/ Denton, TX · GPA 3.8/4.0</span></div>
         <p class="tl-meta">Coursework: Machine Learning · Deep Learning · NLP · Statistics &amp; Probability · Big Data · Data Mining · Reinforcement Learning · Feature Engineering · Software Development for AI.</p>
       </div>
@@ -825,7 +825,7 @@ input,select,textarea{transition:border-color .26s var(--smooth),background .26s
   <div class="wrap">
     <div class="section-label reveal">Let's talk</div>
     <h2 class="reveal" style="transition-delay:.04s">Looking for an ML engineer who ships and measures?</h2>
-    <p class="contact-sub reveal" style="transition-delay:.08s">I'm graduating May 2026 and open to Machine Learning / AI Engineer roles. Say hello — I reply fast.</p>
+    <p class="contact-sub reveal" style="transition-delay:.08s">I graduated in May 2026 and I'm open to Machine Learning / AI Engineer roles. Say hello — I reply fast.</p>
     <div class="contact-cta reveal" style="transition-delay:.12s">
       <a class="mailto" href="mailto:sharatchandrasai999@gmail.com">sharatchandrasai999@gmail.com <span class="arw">↗</span></a>
       <a class="btn-sm" href="resume.pdf" target="_blank" rel="noopener" data-edit="resume">Download résumé</a>
@@ -985,7 +985,7 @@ if($p){
     $cr.innerHTML='<span class="cur">$</span>'+(cReq>=1?cReq.toFixed(2):(cReq>=.01?cReq.toFixed(4):cReq.toFixed(6)));
     $cm.textContent=money(cReq*reqs);$rl.textContent='$'+sel.i+' in / $'+sel.o+' out per 1M';
     var rows=MODELS.map(function(m){return{m:m,c:inTok/1e6*m.i+outTok/1e6*m.o};}),max=Math.max.apply(null,rows.map(function(r){return r.c;}))||1,cheap=rows.reduce(function(a,b){return b.c<a.c?b:a;},rows[0]);
-    $cmp.innerHTML='<div class="cmp-h">Same request, priced across models</div>'+rows.map(function(r){var w=Math.max(3,r.c/max*100),isSel=r.m.id===sel.id,isCheap=r.m.id===cheap.m.id,cls=isSel?'sel':(isCheap?'cheap':'');var tag=isSel?'<span class="tag-sm sel">selected</span>':(isCheap?'<span class="tag-sm cheap">cheapest</span>':'');return '<div class="cmp-row"><div class="cmp-name">'+r.m.name.split(' · ')[0]+' '+tag+'</div><div class="cmp-cost">'+usd(r.c)+'</div><div class="cmp-track"><div class="cmp-fill '+cls+'" style="width:'+w+'%"></div></div></div>';}).join('');
+    $cmp.innerHTML=rows.map(function(r){var w=Math.max(3,r.c/max*100),isSel=r.m.id===sel.id,isCheap=r.m.id===cheap.m.id,cls=isSel?'sel':(isCheap?'cheap':'');var tag=isSel?'<span class="tag-sm sel">selected</span>':(isCheap?'<span class="tag-sm cheap">cheapest</span>':'');return '<div class="cmp-row"><div class="cmp-name">'+r.m.name.split(' · ')[0]+' '+tag+'</div><div class="cmp-cost">'+usd(r.c)+'</div><div class="cmp-track"><div class="cmp-fill '+cls+'" style="width:'+w+'%"></div></div></div>';}).join('');
     if(sel.id!==cheap.m.id&&cReq>0){var save=Math.round((1-cheap.c/cReq)*100);$cmp.insertAdjacentHTML('beforeend','<div class="bench-note" style="margin-top:8px;">Routing to <b>'+cheap.m.name.split(' · ')[0]+'</b> cuts this request <b>'+save+'%</b> → '+money(cheap.c*reqs)+'/mo.</div>');}
   }
   ['input','change'].forEach(function(ev){[$p,$out,$reqs,$model,$trim].forEach(function(el){el.addEventListener(ev,render);});});render();
